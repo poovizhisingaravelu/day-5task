@@ -1,0 +1,140 @@
+1.Do the below programs in anonymous function & IIFE
+a.Print odd numbers in an array
+ function oddnumber(a)
+{
+    
+if(a%2!=0)
+    {
+        
+console.log(`${a} is odd number`);
+    }
+   
+ else
+    {
+       
+ console.log(`${a} isnot odd number`);
+  
+  }
+}
+
+oddnumber(13);
+b.Convert all the strings to title caps in a string array
+(function(str)
+ {
+     
+console.log(str.toUpperCase())
+ 
+})('hi zen class student');
+c.Sum of all numbers in an array
+
+((arr)=>
+ {
+     let sum=0;
+     
+for(let i=0;i<arr.length;i++)
+    
+{
+        sum+=arr[i]
+    }
+    
+console.log(sum);
+ })([1,2,3,4]);
+
+
+function sumof(arr)
+ {
+    
+ let sum=0;
+     
+for(let i=0;i<arr.length;i++)
+    
+{
+        sum+=arr[i]
+    }
+   
+ console.log(sum);
+ }
+ 
+sumof([1,2,3,4]);
+d.Return all the prime numbers in an array
+(( arr)=>
+ {
+ let prime=[];
+ let comp=[];
+    
+ let count=0;
+  
+   for(let i=1;i<arr.length;i++)
+    {
+      
+ if(arr[i]%i===0)
+       {
+          count++;
+     
+     comp.push(arr[i])
+        
+       }
+      
+ else
+       count=0
+     
+  prime.push(arr[i])
+    }
+  
+  if(count==0){
+    
+console.log(prime);}}
+)([1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16]); 
+ 
+e.Return all the palindromes in an array
+((str)=>
+ {
+let reverstr=str.split('').reverse().join('');
+
+if(str==reverstr)
+{
+    
+console.log("this is planinfrome");
+
+}
+else
+console.log("this isnot palnidrome");
+
+})('wow');
+f.Return median of two sorted arrays of the same size.
+ ((arr1,arr2)=>
+  {
+ 
+ 
+var middle1= arr1[Math.round((arr1.length - 1) / 2)];
+ 
+var middle2 = arr2[Math.round((arr2.length ) / 2)];
+ var merge=(arr1+','+arr2);
+ 
+var mergemiddle = merge[Math.round((middle1+middle2) / 2)];
+ 
+
+ console.log(mergemiddle);
+ })([1,2,3],[4,5,6]);
+//output=4
+g.Remove duplicates from an array
+ ((arr)=>
+  {
+ 
+ 
+let newarry=[...new Set(arr)];
+ 
+console.log(newarry.join(" "));
+ })([1,2,3,3,4,5,5,6]);///1 2 3 4 5 6
+h.Rotate an array by k times
+((arr,k)=>
+{
+  for (let i = 0; i < k; i++) {
+    
+  arr.unshift(arr.pop());
+  }
+
+  
+console.log(arr);
+
+})([1,2,3,4,5],3);
